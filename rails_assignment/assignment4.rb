@@ -73,14 +73,15 @@ By callbakcs we can change method automatically in a controller action lifecycle
 
 class Task < ApplicationRecord
     before_validation :set_title
-    validates :title, presence: true, length: { maximum: 50 }
+    validates :title, presence: true 
 
     private
     def set_title
         self.title = "do something"
     end
-  end
-  
+end
+
+
 
 
 
